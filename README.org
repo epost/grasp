@@ -1,0 +1,13 @@
+#+title:graph language
+
+
+* Features
+- [X] comma syntax: ~a,b,c -> d, e~
+- [ ] type syntax? ~a:A - b:B -> c:C~
+- [ ] transitive syntax? ~a -> b -> c -> d~
+- [ ] allow (back)slash in node / edge labels? (handy for paths and URLs)?
+- [ ] quoted node / edge labels?
+- [ ] dash as part of identifiers maar dan zonder conflicts or ambiguities
+- [ ] question mark as part of identifiers
+- [ ] node / edge ids? maybe using hash mark?
+- allow references: graph transformations, styling, comments, legend, etc
