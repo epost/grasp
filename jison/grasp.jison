@@ -5,9 +5,9 @@
 
 (\n|";")+             return "EDGESEP"
 
-/* [A-Za-z0-9_]+\b       return "STR" */
-/* [A-Za-z0-9_-]+\b      return "STR" */
-[A-Za-z0-9_.]+\b      return "STR"
+/* [A-Za-z0-9_]+\b       return "IDENT" */
+/* [A-Za-z0-9_-]+\b      return "IDENT" */
+[A-Za-z0-9_.]+\b      return "IDENT"
 [0-9]+("."[0-9]+)?\b  return "NUM"
 ","                   return "COMMA"
 "->"                  return "->"
@@ -38,8 +38,8 @@ nodes:
 node:
   /* : NUM */
   /*   { $$ = Number($1) } */
-    STR
-    { $$ = $STR }
+    IDENT
+    { $$ = $IDENT }
   ;
 
 edges:
