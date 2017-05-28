@@ -1,11 +1,15 @@
 #+title:Grasp
 
-Grasp, short for GRAph SPecification language, allows you:
+Grasp, short for GRAph Specification Processor, allows you to:
 
 - Specify graphs in a super concise format.
+- Output graph structure as JSON.
 - Leave formatting (layout, colouring, etc.) to other tools, such as GraphViz.
 
+
 * Examples
+
+Syntax is inspired by both GraphViz and CYPHER:
 
 #+BEGIN_EXAMPLE
 a -> b
@@ -14,17 +18,25 @@ d, e, f -> g
 
 1 -succ-> 2
 
+x:A -f-> y:B
+y -g:G-> z
+
+src -psc-> output
+src_js -babel-> build_js.js
+output -webpack-> dist_bundle.js
 build_js.js -webpack-> dist_bundle.js
 #+END_EXAMPLE
 
 * Features
-- [X] No formatting, only structure
+- [X] no formatting, only structure
 - [X] comma syntax: ~a,b,c -> d, e~
 - [X] type syntax? ~a:A - b:B -> c:C~
+- [ ] comments
 - [ ] transitive syntax? ~a -> b -> c -> d~
 - [ ] allow (back)slash in node / edge labels? (handy for paths and URLs)?
 - [ ] quoted node / edge labels?
 - [ ] dash as part of identifiers maar dan zonder conflicts or ambiguities
 - [ ] question mark as part of identifiers
 - [ ] node / edge ids? maybe using hash mark?
-- allow references: graph transformations, styling, comments, legend, etc
+- [ ] allow references: graph transformations, styling, comments, legend, etc
+- [ ] support formats other than JSON.

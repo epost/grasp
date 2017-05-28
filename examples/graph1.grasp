@@ -2,10 +2,12 @@ a -> b
 b -> c; c -> d
 d, e, f -> g
 
+1 -succ-> 2
+
 x:A -f-> y:B
 y -g:G-> z
 
-src -psc-> output;
-src_js -babel-> build_js.js;
-output -webpack-> dist_bundle.js;
-build_js.js -webpack-> dist_bundle.js;
+src -psc-> output
+src_js -babel-> build_js.js
+output -webpack-> dist_bundle.js
+build_js.js -webpack-> dist_bundle.js
