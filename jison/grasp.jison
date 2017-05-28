@@ -1,13 +1,9 @@
 %lex
 %%
 
-\s+                  // skip whitespace
-// TODO remove
-";"                   return "SEMI"
+[^\S\n]+                                  // skip whitespace except newlines
 
-/* [ ]+                  // skip whitespace */
-/* [\n]+                 return "EOLS" */
-
+(\n|";")+             return "EDGESEP"
 
 /* [A-Za-z0-9_]+\b       return "STR" */
 /* [A-Za-z0-9_-]+\b      return "STR" */
@@ -28,7 +24,7 @@
 %%
 
 graph:
-      edges SEMI? EOF
+      edges EDGESEP* EOF
       { console.log(JSON.stringify($1, null, 2)); return $1 }
     ;
 
@@ -47,7 +43,7 @@ node:
   ;
 
 edges:
-    edges SEMI edge
+    edges EDGESEP+ edge
     { $$ = $edges; $$.unshift($edge) }
   | edge
     { $$ = [$edge] }

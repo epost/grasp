@@ -1,3 +1,5 @@
+a->b; b->c
+
 src -psc-> output;
 src_js -babel-> build_js.js;
 output -webpack-> dist_bundle.js;
