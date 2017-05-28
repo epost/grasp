@@ -1,4 +1,6 @@
-a->b; b->c
+a -> b
+b -> c; c -> d
+d, e, f -> g
 
 src -psc-> output;
 src_js -babel-> build_js.js;

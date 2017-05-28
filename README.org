@@ -1,7 +1,24 @@
-#+title:graph language
+#+title:Grasp
 
+Grasp, short for GRAph SPecification language, allows you:
+
+- Specify graphs in a super concise format.
+- Leave formatting (layout, colouring, etc.) to other tools, such as GraphViz.
+
+* Examples
+
+#+BEGIN_EXAMPLE
+a -> b
+b -> c; c -> d
+d, e, f -> g
+
+1 -succ-> 2
+
+build_js.js -webpack-> dist_bundle.js
+#+END_EXAMPLE
 
 * Features
+- [X] No formatting, only structure
 - [X] comma syntax: ~a,b,c -> d, e~
 - [ ] type syntax? ~a:A - b:B -> c:C~
 - [ ] transitive syntax? ~a -> b -> c -> d~
