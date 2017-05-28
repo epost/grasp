@@ -2,6 +2,7 @@
 %%
 
 [^\S\n]+                                  // skip whitespace except newlines
+"#".*[\n]+                                // skip line comments
 
 (\n|";")+             return "EDGESEP"
 
