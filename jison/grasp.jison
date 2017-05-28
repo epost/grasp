@@ -12,6 +12,7 @@
 ","                   return "COMMA"
 "->"                  return "->"
 "-"                   return "-"
+":"                   return "COLON"
 
 
 <<EOF>>               return "EOF"
@@ -35,11 +36,13 @@ nodes:
     { $$ = [$node] }
   ;
 
+// TODO allow anonymous typed term, e.g. ":A"?
 node:
-  /* : NUM */
-  /*   { $$ = Number($1) } */
+    IDENT COLON IDENT
+    { $$ = { id: $IDENT, type: $3 } }
+  |
     IDENT
-    { $$ = $IDENT }
+    { $$ = { id: $IDENT } }
   ;
 
 edges:

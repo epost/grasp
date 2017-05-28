@@ -20,7 +20,7 @@ build_js.js -webpack-> dist_bundle.js
 * Features
 - [X] No formatting, only structure
 - [X] comma syntax: ~a,b,c -> d, e~
-- [ ] type syntax? ~a:A - b:B -> c:C~
+- [X] type syntax? ~a:A - b:B -> c:C~
 - [ ] transitive syntax? ~a -> b -> c -> d~
 - [ ] allow (back)slash in node / edge labels? (handy for paths and URLs)?
 - [ ] quoted node / edge labels?

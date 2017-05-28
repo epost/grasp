@@ -2,6 +2,9 @@ a -> b
 b -> c; c -> d
 d, e, f -> g
 
+x:A -f-> y:B
+y -g:G-> z
+
 src -psc-> output;
 src_js -babel-> build_js.js;
 output -webpack-> dist_bundle.js;
