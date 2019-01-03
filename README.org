@@ -1,4 +1,4 @@
-#+title:Grasp
+#+title:Grasp (deprecated in favour of [purescript-grasp](https://github.com/epost/purescript-grasp))
 
 Grasp, short for GRAph Specification Processor, allows you to:
 
